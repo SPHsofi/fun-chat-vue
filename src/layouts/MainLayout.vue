@@ -3,8 +3,10 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          Quasar App
+          {{ authStore.authData.login }}`s Messanger
         </q-toolbar-title>
+
+      <LogoutUser />
       </q-toolbar>
     </q-header>
 
@@ -15,5 +17,8 @@
 </template>
 
 <script setup lang="ts">
+import LogoutUser from 'src/features/auth/components/LogoutUser.vue';
+import { useAuthStore } from 'src/features/auth/store/authStore';
 
+const authStore = useAuthStore();
 </script>
