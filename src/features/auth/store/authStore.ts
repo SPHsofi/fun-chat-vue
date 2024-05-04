@@ -16,7 +16,7 @@ export const useAuthStore = defineStore('auth', () => {
       user: {
         login: authData.login,
         password: authData.password
-      }
+      },
     });
 
     ws.send(jsonData);

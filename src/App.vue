@@ -21,12 +21,12 @@ const authStore = useAuthStore();
 const types: Types = {
   USER_LOGIN: authStore.handleUserLogin,
   USER_LOGOUT: authStore.handleUserLogout,
-}
+};
 
 ws.addEventListener('message', (event) => {
   event.preventDefault();
   const data: Data = JSON.parse(event.data);
   const action = types[data.type];
   action();
-})
+});
 </script>
