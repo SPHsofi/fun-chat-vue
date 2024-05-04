@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          {{ authStore.authData.login }}`s Messanger
+          {{ authStore.authData.login }}`s Messenger
         </q-toolbar-title>
 
       <LogoutUser />
